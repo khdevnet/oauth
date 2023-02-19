@@ -15,8 +15,11 @@ The ID token may also contain information about the user such as their name or e
 The access token is meant to be read and validated by the API. 
 
 Here are some further differences between ID tokens and access tokens:
-[Id token vs Access token](https://oauth.net/id-tokens-vs-access-tokens/) [Difference](https://auth0.com/blog/id-token-access-token-what-is-the-difference/) [optimize id tokens](https://leastprivilege.com/2016/12/14/optimizing-identity-tokens-for-size/)
 * ID tokens are meant to be read by the OAuth client. Access tokens are meant to be read by the resource server.
 * ID tokens are JWTs. Access tokens can be JWTs but may also be a random string.
 * ID tokens should never be sent to an API. Access tokens should never be read by the client.
 
+More info
+* [Id token vs Access token](https://oauth.net/id-tokens-vs-access-tokens/) 
+* [Difference](https://auth0.com/blog/id-token-access-token-what-is-the-difference/)
+* [optimize id tokens](https://leastprivilege.com/2016/12/14/optimizing-identity-tokens-for-size/)
