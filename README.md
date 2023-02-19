@@ -10,6 +10,7 @@
 
 [ID token](https://www.oauth.com/oauth2-servers/openid-connect/id-tokens/) contains information about what happened when a user authenticated, and is intended to be read by the OAuth client. 
 The ID token may also contain information about the user such as their name or email address, although that is not a requirement of an ID token.
+
 [Access tokens](https://oauth.net/2/access-tokens/) are what the OAuth client uses to make requests to an API.
 The access token is meant to be read and validated by the API. 
 
