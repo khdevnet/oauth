@@ -23,3 +23,35 @@ More info
 * [Id token vs Access token](https://oauth.net/id-tokens-vs-access-tokens/) 
 * [Difference](https://auth0.com/blog/id-token-access-token-what-is-the-difference/)
 * [optimize id tokens](https://leastprivilege.com/2016/12/14/optimizing-identity-tokens-for-size/)
+
+## Permissions vs Privileges vs Scopes
+
+### Permissions:
+Declaration of the actions that can be executed on the resource
+
+Example:
+forecasts.read, forecasts.loadexternal
+
+### Privileges:
+* Permissions assigned to the user. When you assign a permission to a user, you are granting them a privilege.
+* If you assign a user the permission to read a document, you are granting them the privilege to read that document.
+* resources expose permissions. Users have privileges
+
+Example:
+forecasts.read, forecasts.loadexternal
+
+### Scopes:
+* scopes what application can do on behalf of the user
+* delegated access it is when the app will first ask for permission based on scopes to access some resource on the user’s behalf.
+* in a delegated authorization scenario, the application may act on behalf of the user even when the user is not logged in.
+* in a delegated scenario, not all the permissions on a resource should necessarily be made available to be requested as scopes. You could reserve some permissions for the user and decide that they are not delegable
+* you can't map a scope to a permission not assigned to the user
+* if you admin and has all permissions to work with resources, application can has only read permissions defined using scopes
+
+Example:
+"forecasts.read", "profile"
+
+More info:
+[permissions-privileges-and-scopes](https://auth0.com/blog/permissions-privileges-and-scopes/)
+[delegated-access-primer](https://learn.microsoft.com/en-us/azure/active-directory/develop/delegated-access-primer)
+
