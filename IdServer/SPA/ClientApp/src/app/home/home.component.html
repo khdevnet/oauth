@@ -1,0 +1,47 @@
+<div>Welcome to home Route</div>
+
+<div *ngIf="isAuthenticated$ | async; else noAuth">
+  <button (click)="logout()">Logout</button>
+  <button (click)="fetch()">Fetch forecasts</button>
+  <hr />
+  Is Authenticated: {{ isAuthenticated$ | async }}
+  <hr />
+  <div
+    *ngIf="((externalForecasts$ | async) || []).length; else noExternalScope"
+  >
+    <br />
+    External Forecasts
+    <pre>{{ externalForecasts$ | async | json }}</pre>
+
+    <br />
+  </div>
+  <div *ngIf="((forecasts$ | async) || []).length">
+    <br />
+    Forecasts
+    <pre>{{ forecasts$ | async | json }}</pre>
+
+    <br />
+  </div>
+  access token
+  <br/>
+
+  <pre>{{ (user$ | async).access_token }}</pre>
+  <pre>{{ accessTokenObj$ | async | json }}</pre>
+
+  <br />
+  <hr />
+  user data
+  <pre>{{ user$ | async | json }}</pre>
+
+  <br />
+</div>
+
+<ng-template #noExternalScope>
+  external forecast scope wasn't granted to application
+  <hr />
+</ng-template>
+
+<ng-template #noAuth>
+  <button (click)="login()">Login</button>
+  <hr />
+</ng-template>
