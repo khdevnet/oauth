@@ -1,4 +1,5 @@
 ## OAuth and OpenId
+<img src = "https://github.com/khdevnet/oauth/blob/main/OAuth.drawio.png" width="500px" > 
 [OAuth 2.0](https://www.okta.com/identity-101/whats-the-difference-between-oauth-openid-connect-and-saml/) is a framework that controls authorization to a protected resource such as an application or a set of files, while OpenID Connect is industry standards for[Federated authentication](https://www.okta.com/identity-101/what-is-federated-identity/).
 
 * OAuth 2.0: If you’ve ever signed up to a new application and agreed to let it automatically source new contacts via Facebook or your phone contacts, then you’ve likely used OAuth 2.0. This standard provides secure **delegated access**. That means an application can take actions or access resources from a server on behalf of the user, without them having to share their credentials. It does this by allowing the identity provider (IdP) to issue tokens to third-party applications with the user’s approval.
